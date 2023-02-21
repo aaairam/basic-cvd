@@ -124,7 +124,7 @@
     margin: 0 auto;
 }
 
-@media screen and(max-width:486px){
+@media screen and(max-width:500px){
     .container{
         width: 100%;
     }
@@ -132,9 +132,10 @@
 /*---header---*/
 .header{
     background-color: #2b2b2b;
-    padding: 2rem;
-    position: relative;
+    padding: 1rem;
+    position: fixed;
     width: 100%;
+    z-index: 20 ;
 }
 
 .header .header__wrapper{
@@ -156,6 +157,7 @@
 .header .branding{
     display: flex;
     align-items: center;
+    flex-shrink: 0;
 }
 
 
@@ -216,8 +218,8 @@
 
    .header .header__nav{
         position: absolute;
-        background: rgb(255, 255, 255);
-        top: 9.5rem;
+        background: #ffffff;
+        top: 8rem;
         right: -100rem;
         width: 100%;
         height: 100vh;
@@ -259,6 +261,7 @@
 
 .banner img{
   margin-left: 10rem;
+  width: 60rem;
 }
 
 .banner .banner__text h1{
@@ -304,12 +307,54 @@
   }
 }
 
+/*-----home-services---*/
+.home-services{
+  background: #2b2b2b;
+  padding: 8rem 0;
+}
+
+.home-services .home-services__item i{
+  font-size: 6rem;
+  color: #ffa700;
+  margin-bottom: 6rem;
+}
+.home-services .home-services__item{
+  text-align: center;
+  margin: 0 5rem;
+}
+
+
+.home-services .home-services__item h4{
+  font-size: 2.5rem;
+  color: #ffa700;
+  font-weight: 600;
+}
+
+.home-services .home-services__item p{
+  color: #ffffff;
+  margin: 2rem 0;
+  text-align: justify;
+  line-height: 1.8;
+}
+.home-services .home-services__wrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    row-gap: 10rem;
+    
+}
+
+@media screen and (max-width:500px) {
+.home-services .home-services__wrapper{
+    grid-template-columns: 3fr;
+    padding: 1rem; 
+  }
+}
 /*---Banner About Me---*/
 
 .bannerr {
   background: #ffffff;
-  padding: 5rem 0;
-  padding-top: 15rem;
+  padding: 10rem 0;
+  padding-top: 10;
 }
 
 .bannerr .bannerr__wrapper{
@@ -336,9 +381,9 @@
     font-size: 3rem;
 }
 .bannerr .bannerr__text p{
-  max-width: -20rem;
+  max-width: -10rem;
   text-align: justify;
-  margin: 3rem 0;
+  margin: 5rem 0;
 }
 
 
@@ -360,6 +405,7 @@
     margin: 0 auto;
     width: 20rem;
     margin-bottom: 3rem;
+    z-index: 10;
   }
   .bannerr .bannerr__text p{
     max-width: 2  0rem;
@@ -382,6 +428,7 @@
 
 .bg--yellow:hover{
   background: #2b2b2b;
+  border: 100rem;
 }
 
 .bg--dark{
