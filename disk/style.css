@@ -134,6 +134,7 @@
     background-color: #2b2b2b;
     padding: 2rem;
     position: relative;
+    width: 100%;
 }
 
 .header .header__wrapper{
@@ -149,7 +150,7 @@
 .header .branding h2{
     color: #ffffff;
     margin-left: 1rem;
-    font-size: 2.5rem;
+    font-size: 3rem;
 }
 
 .header .branding{
@@ -163,7 +164,7 @@
 }
 
 .header .header__nav ul{
-display: flex;
+    display: flex;
 }
 
 .header .header__nav ul li{
@@ -172,13 +173,13 @@ display: flex;
 }
 
 .header .header__nav li a{
-text-decoration: none;
-color: #ffffff;
-font-size: 2rem;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 2rem;
 }
 
 .header .header__nav ul li:hover a{
-    color: #ffa700  ;
+    color: #ffa700;
 }
 .toggle__menu{
     display: none;
@@ -191,30 +192,201 @@ font-size: 2rem;
     display: block;
     margin-bottom: .5rem;
     border-radius: 5rem;
+    transition: .5s ease;
+}
+
+.toggle__menu.open span:first-child{
+    transform: translate(0, 10px) rotate(225deg);
+    transition: .5s ease;
+}
+
+.toggle__menu.open span:nth-child(2){
+    opacity: 0;
+    transition: .5s ease;
+}
+
+.toggle__menu.open span:last-child{
+    transform: translate(0, -6px) rotate(-225deg);
+    transition: .5s ease;
 }
 @media screen and (max-width:500px){
    .toggle__menu{
-    display: block;
+        display: block;
    }
 
    .header .header__nav{
-    position: absolute;
-    background: rgb(255, 255, 255);
-    top: 9.5rem;
-    left: 0;
-    width: 100%;
-    height: 100vh;
+        position: absolute;
+        background: rgb(255, 255, 255);
+        top: 9.5rem;
+        right: -100rem;
+        width: 100%;
+        height: 100vh;
+        transition: .5s ease;
    }
 
    .header .header__nav ul{
-    display: block;
-    text-align: center;
+        display: block;
+        text-align: center;
    }
    .header .header__nav ul li{
-    margin-left: 0;
+        margin-left: 0;
+        border-bottom: 1px solid #2b2b2b;
    }
    .header .header__nav ul li a{
-    color: #2b2b2b;
-    font-size: 3rem;
+        color: #2b2b2b;
+        font-size: 3rem;
    }
+   .header .header__nav ul li:hover{
+    background: hsl(0, 0%, 50%);
+   }
+   .header__nav.open{
+    right: 0;
+   }
+  }
+
+/*--------Banner--------*/
+
+.banner{
+  background: #ffffff;
+  padding: 5rem 0;
+  padding-top: 15rem;
 }
+  .banner .banner__wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner img{
+  margin-left: 10rem;
+}
+
+.banner .banner__text h1{
+  color: #ffa700;
+  font-size: 8rem;
+  font-weight: 800;
+  max-width: 40rem;
+  line-height: 1;
+}
+
+.banner .banner__text p{
+  max-width: 40rem;
+  text-align: justify;
+  margin: 3rem 0;
+}
+.banner a#banner__btn{
+  text-transform: uppercase;
+  border: 1px solid transparent !important;
+}
+
+.banner a{
+  text-transform: uppercase;
+}
+
+@media screen and (max-width:500px) {
+  .banner__wrapper{
+    flex-direction: column-reverse;
+  }
+
+  .banner .banner__text{
+    text-align: center;
+    margin: 0 auto;
+  }
+  .banner .banner__text h1{
+    max-width: fit-content;
+    font-size: 3rem;
+    margin: 0 auto;
+  }
+  .banner img{
+    margin-left: 0;
+    width: 20rem;
+    margin-bottom: 3rem;
+  }
+}
+
+/*---Banner About Me---*/
+
+.bannerr {
+  background: #ffffff;
+  padding: 5rem 0;
+  padding-top: 15rem;
+}
+
+.bannerr .bannerr__wrapper{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.bannerr .bannerr__wrapper .image-container{
+  position: relative;
+}
+
+.bannerr .bannerr__wrapper .image-container .overflow {
+  position: absolute;
+  opacity: 50%;
+}
+
+.bannerr .bannerr__text{
+  max-width: 60rem;
+}
+
+.bannerr .bannerr__text h3{
+    color: #ffa700;
+    font-size: 3rem;
+}
+.bannerr .bannerr__text p{
+  max-width: -20rem;
+  text-align: justify;
+  margin: 3rem 0;
+}
+
+
+@media screen and (max-width:500px) {
+  .bannerr__wrapper{
+    flex-direction: column;
+  }
+
+  .bannerr .bannerr__text{
+    text-align: center;
+    margin: 0 auto;
+  }
+  .bannerr .bannerr__text h1{
+    max-width: fit-content;
+    font-size: 3rem;
+    margin: 0 auto;
+  }
+  .bannerr img{
+    margin: 0 auto;
+    width: 20rem;
+    margin-bottom: 3rem;
+  }
+  .bannerr .bannerr__text p{
+    max-width: 2  0rem;
+    text-align: justify;
+    margin: 4rem;
+  }
+}
+/*----Repeatable patterns-----*/
+.btn{
+  padding: 1.2rem 1.5rem;
+  border-radius: 5rem;
+  display: inline-block;
+  border: 1px solid transparent;
+}
+
+.bg--yellow{
+  background: #ffa700;
+  color: #ffffff;
+}
+
+.bg--yellow:hover{
+  background: #2b2b2b;
+}
+
+.bg--dark{
+  background: #ffa700;
+  color: #ffffff ;
+  border: 1px solid #ffa700;
+}
+
