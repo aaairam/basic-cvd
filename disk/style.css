@@ -133,9 +133,9 @@
 .header{
     background-color: #2b2b2b;
     padding: 1rem;
-    position: fixed;
-    width: 100%;
-    z-index: 20 ;
+    /* position: fixed;
+    width: 100%; */
+    z-index: 999;
 }
 
 .header .header__wrapper{
@@ -224,6 +224,8 @@
         width: 100%;
         height: 100vh;
         transition: .5s ease;
+        z-index: 999;
+        /* display: none; */
    }
 
    .header .header__nav ul{
@@ -239,10 +241,10 @@
         font-size: 3rem;
    }
    .header .header__nav ul li:hover{
-    background: hsl(0, 0%, 50%);
+      background: hsl(0, 0%, 50%);
    }
    .header__nav.open{
-    right: 0;
+      right: 0;
    }
 }
 
@@ -523,6 +525,226 @@
     margin: 4rem;
   }
 }
+
+/*-----First Bannner Services--------*/
+ 
+.firstbanner .container{
+display: flex;
+align-items: center;
+justify-content: space-between;
+margin-bottom: 1rem;
+}
+
+
+
+.firstbanner .firstbanner_wrapper{
+  background: #ffffff;
+  padding: 7rem 0;
+  padding-bottom: 0;
+ }
+
+ .firstbanner .firstbanner_wrapper .bannerText h3{
+  color: #ffa700;
+  font-size: 7.5rem;
+  font-weight: 700;
+  line-height: 1;
+ }
+ .firstbanner .firstbanner_wrapper .bannerText p{
+   max-width: 50rem;
+  text-align: justify;
+  margin: 3rem 0;
+  margin-top: 5rem;
+  
+ }
+
+ .firstbanner .firstbannerImg{
+  position: relative;
+  width: 100rem;
+  margin-right: -40rem;
+  margin-top: 5rem;
+ }
+
+ .firstbanner .firstbannerImgg{
+  position: relative;
+  width: 100rem;
+ }
+
+ .firstbanner .firstbannerImgg .overflow{
+  position: absolute;
+  opacity: 50%; 
+ }
+ 
+ .firstbanner .firstbannerImg .overflow{
+  position: absolute;
+  opacity: 50%; 
+ }
+
+ .firstbanner .firstbanner_wrapper .price p{
+  color: #2b2b2b;
+ }
+
+ .firstbanner .firstbanner_wrapper .price h1{
+  color: #ffa700;
+  font-size: 3rem;
+  font-weight: 750;
+ }
+ .firstbanner .firstbanner_wrapper .price small{
+  font-size: 1.4rem;
+  display: flex;
+ }
+
+ .firstbanner .Iconss {
+  align-items: center;
+  color: #ffa700;
+  text-align: center;
+  font-size: 8rem;
+}
+
+@media screen and (max-width:500px) {
+  .firstbanner .container{
+    flex-direction: column-reverse;
+    margin: 1rem;
+  }
+  .firstbanner .firstbanner_wrapper .bannerText h3{
+    font-size: 4rem;
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  .firstbanner .firstbanner_wrapper .bannerText p{
+    text-align: justify;
+    margin: 3rem; 
+    margin-right: 5rem;
+  }
+
+  .firstbanner  .firstbannerImg img{
+    height: 40rem;
+    width: 40rem;
+    margin-left: 10rem;
+  }
+  .firstbanner .firstbanner_wrapper .price{
+    text-align: center;
+  }
+  .firstbanner .firstbanner_wrapper .price small{
+    text-align: center;
+    margin-left: 15rem;
+  }
+}
+
+/*-----Second Bannner Services--------*/
+
+.secondbanner {
+  background:#2b2b2b;
+  padding: 10rem 0;
+  padding-top: 10;
+  padding-bottom: 0;
+  padding-right: 5rem;
+
+}
+
+.secondbanner .secondbanner_wrapper{
+  display: flex;
+  justify-content: space-evenly;
+
+}
+
+.secondbanner .secondbanner__wrapper .imagee-container{
+  position: relative;
+  margin-left: -5rem;
+  margin-top: 100rem;
+}
+
+.secondbanner .secondbanner__wrapper .imagee-container img{
+  position: relative;
+  width: 100rem;
+  margin-top: 100rem;
+ }
+
+
+.secondbanner .secondbannerText{
+  max-width: 80rem;
+}
+
+.secondbanner .secondbanner_wrapper .secondbannerText h3{
+    color: #ffa700;
+    font-size: 7rem;
+    font-weight: 700;
+    margin: 5rem 10rem;
+
+}
+.secondbanner .secondbanner_wrapper .secondbannerText p{
+  text-align: justify;
+  margin: 5rem 10rem;
+  color: #ffffff;
+
+}
+
+.secondbanner .secondbanner_wrapper .price p{
+  color: #ffffff;
+  margin: 0 10rem;
+ }
+
+ .secondbanner .secondbanner_wrapper .secondbannerText .price h1{
+  color: #ffa700;
+  font-size: 3rem;
+  font-weight: 750;
+  margin: 0rem 10rem;
+ }
+ .secondbanner .secondbanner_wrapper .secondbannerText .price small{
+  font-size: 1.2rem;
+  display: flex;
+  color: #ffffff;
+  margin: 0rem 10rem;
+ }
+
+ .secondbanner .Iconss {
+  align-items: center;
+  color: #ffa700;
+  text-align: center;
+  font-size: 8rem;
+}
+
+@media screen and (max-width:500px) {
+  .secondbanner .secondbanner_wrapper{
+    flex-direction: column;
+  }
+
+  .secondbanner .secondbanner_wrapper .imagee-container{
+    margin-left: 0;
+    margin-top: 1rem;
+  }
+
+  .secondbanner .secondbanner_wrapper .imagee-container img{
+    height: 40rem;
+    width: 40rem;
+    margin-left: 3.2rem;
+  }
+  .secondbanner .secondbanner_wrapper .secondbannerText{
+    text-align: center;
+    align-items: center;
+    margin: 0;
+  }
+
+.secondbanner .secondbanner_wrapper .secondbannerText h3{
+  margin: 0;
+  padding: 0;
+  font-size: 5rem;
+  margin-left: 4rem;
+  margin-bottom: 4rem;
+  margin-top: 4rem;
+}
+
+.secondbanner .secondbanner_wrapper .secondbannerText p{
+  margin: 0;
+  padding: 0;
+  margin-left: 4rem;
+  
+}
+.secondbanner .secondbanner_wrapper .secondbannerText small{
+  margin-left: 20rem;
+}
+}
+
+
 /*----Latest Trends-----*/
 
 .latestTrend{
@@ -599,7 +821,7 @@
     .latestTrend_wrapper .latest_card{
       margin: 3rem 4rem;
     }
-  }
+}
 
 /*----Contact----*/
 
@@ -631,7 +853,7 @@
       grid-template-columns: 3fr;
       padding: 1rem; 
     }
-  }
+}
 
 /*------Footer------*/
 
@@ -710,7 +932,242 @@
       justify-content: center;
     }
 
+}
+
+  /*----Updates----*/
+  .updates{
+    background: #ffffff;
+    padding: 3rem 0;
   }
+
+  .updates .updates_wrapper{
+    display: grid;
+    grid-template-columns: 2.5fr 1.5fr;
+    column-gap: 5rem;
+  }
+
+  .updates .updates_item img{
+    width: 100%;
+  }
+  .updates .updates_item{
+    padding: 5rem 0;
+  }
+  .updates .updates_item:last-child{
+    padding-top: 0;
+    padding-bottom: 5rem;
+  }
+    .updates .updates_title{
+      padding-top: 15rem;
+    }
+
+    .updates .updates_title h1{
+      color: #ffa700;
+      font-size: 5rem;
+      font-weight: 800;
+      margin-bottom: 2rem;
+    }
+
+    .updates .updates_author ul{
+      display: flex;
+      margin-top: 2rem;
+      margin-bottom: 4rem;
+    }
+
+    .updates .updates_author li{
+      margin-right: 2rem;
+    }
+    
+    .updates .updates_author ul li i{
+      margin-right: 1rem;
+    }
+
+    .updates .updates_text h3{
+      color: #ffa700;
+      font-size: 3rem;
+      font-weight: 600;
+    }
+
+    .updates .updates_text p{
+      margin:  2.5rem 0;
+      text-align: justify;
+    }
+
+    .updates .updates_text a{
+      color: #ffa700;
+    }
+
+    .updates .updates_item:not(:last-child){
+      border-bottom: 1px solid #2b2b2b;
+    }
+
+    .updates .updates_category{
+      padding: 5rem 0;
+    }
+    .updates .updates_category h3{
+      color: #ffa700;
+      font-size: 3rem;
+      font-weight: 600;
+    }
+
+    .updates .updates_category table{
+      width: 100%;
+      margin-top: 3rem;
+    }
+
+    .updates .updates_category table tr{
+      height: 5rem;
+    }
+
+
+    /*--Recent Post---*/
+
+
+    .recent_post{
+      border-top: 1px solid #2b2b2b;
+    }
+
+
+    .recent_post .rpItem .rpItem_text h4{
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 4rem;
+      
+    }
+
+    
+    .recent_post h3{
+      color: #ffa700; 
+      font-size: 3rem;
+      font-weight: 600;
+      margin-top: 10rem;
+    }
+    .recent_post .rpItem {
+      display: flex;
+      margin: 5rem 0;
+
+    }
+
+    .recent_post .rpItem .rpItem_text{
+     margin-left: 3rem;
+    }
+
+    .tags h3{
+      color: #ffa700;
+      font-size: 3rem;
+      font-weight: 700;
+      margin-bottom: 4rem;
+      
+    }
+
+    .tags .updatesTagsbtn{
+      /* margin-right: 10rem; */
+      max-width: 70%;
+    }
+
+    .updatesTagsbtn{
+      max-width: 60%;
+    }
+
+    @media screen and (max-width:500px) {
+
+      .updates .container .updates_wrapper {
+        display: flex;
+        flex-direction: column;
+        padding: 0 5rem;
+      }
+
+      .tags .updatesTagsbtn{
+        max-width: 100%;
+      }
+        
+      .updates .updates_author{
+          font-size: 0.9rem;
+          display: flex;
+        }
+
+        .updates .updates_title{
+          text-align: center;
+        }
+    }
+
+/*------Contact--------*/
+
+.contactBanner {
+  background: #2b2b2b;
+  display: flex;
+}
+
+.contactBanner .contact_wrapper{
+  display: flex;
+}
+
+.contactBanner .contact_wrapper h1{
+  color: #ffa700;
+  font-size: 6rem ;
+  font-weight: 800;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+
+.contactBanner .contact_wrapper .contactText p{
+    color: #ffffff;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+}
+ .contactBanner .contact_wrapper .Iconsss{
+  padding: 0%;
+ }
+ .contactBanner .contact_wrapper .Iconsss ul{
+  margin-bottom: 5rem;
+ }
+ .contactBanner .contact_wrapper .Iconsss ul li{
+    justify-content: space-evenly;
+    padding-top: 3rem;
+ }
+
+ .contactBanner .contact_wrapper .Iconsss ul i{
+      color: #ffa700;
+      margin-right: 1rem;
+ }
+
+ .contactBanner .contact_wrapper .Iconsss ul a{
+  color: #ffffff;
+ }
+
+ .contactBanner .contact_wrapper .contactRight{
+  width: 100%;
+  /* margin: 0 auto; */
+  max-width: 40rem;
+  
+ }
+
+.contactBanner .contact_wrapper .contactRight input{
+    width: 100%;
+    height: 10rem;
+    margin-right: 50rem;
+    padding-left: 10rem;
+}
+
+.contactBanner .contact_wrapper .contactRight .input input{  
+  border-radius: 1rem;
+  justify-content: space-evenly;
+  margin: 1rem;
+  width: 100%;
+
+
+}
+
+.contactBanner .contact_wrapper .contactLeft .Iconssss ul a{
+  color: #ffffff;
+  padding: 0 1rem;
+}
+
+.contactBanner .contact_wrapper .contactLeft .Iconssss ul{
+  display: flex;
+  color: #ffa700;
+}
+
+
 
 
 /*----Repeatable patterns-----*/
@@ -762,3 +1219,27 @@
   color: #ffffff ;  
   border: 1px solid #ffa700;
 }
+
+.bb-1{
+  border-bottom: 1px solid #2b2b2b;
+}
+
+.bg--light{
+  background: #ffffff;
+  color: #2b2b2b;
+  border: 1px solid #2b2b2b;
+  padding: 1.2rem 1.3rem;
+  margin: 1.2rem;
+}
+
+.bg--light:hover{
+  background: #2b2b2b;
+  color: #ffffff;
+  border: 1px solid #2b2b2b;
+}
+
+.boxshadow{
+  box-shadow: 5px 5px 20px 5px black;
+  border-bottom: 1px solid #2b2b2b;
+}
+
